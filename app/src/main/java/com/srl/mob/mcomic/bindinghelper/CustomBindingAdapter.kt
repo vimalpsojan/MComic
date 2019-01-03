@@ -2,6 +2,7 @@ package com.srl.mob.mcomic.bindinghelper
 
 import android.view.View
 import androidx.databinding.BindingAdapter
+import com.facebook.drawee.view.SimpleDraweeView
 
 class CustomBindingAdapter {
     companion object {
@@ -9,6 +10,13 @@ class CustomBindingAdapter {
         @JvmStatic
         fun showHide(view: View, show: Boolean) {
             view.visibility = if (show) View.VISIBLE else View.GONE
+        }
+
+        @BindingAdapter("imageUrl")
+        @JvmStatic
+        fun setUrl(simpleDraweeView: SimpleDraweeView,url:String)
+        {
+            simpleDraweeView.setImageURI(url)
         }
     }
 }

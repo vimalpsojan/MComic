@@ -1,23 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:showIn="@layout/fragment_comic_list"
-        app:cardBackgroundColor="@android:color/transparent"
-        app:cardUseCompatPadding="true">
-    <RelativeLayout
+        tools:showIn="@layout/fragment_comic_list">
+    <data>
+        <variable name="comic" type="com.srl.mob.mcomic.model.Comic"/>
+        <variable
+                name="callback"
+                  type="com.srl.mob.mcomic.adapters.ItemClickCallBack&lt;com.srl.mob.mcomic.model.Comic&gt;"/>
+    </data>
+    <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
-            android:background="@android:color/transparent"
-            android:layout_height="180dp">
-        <com.facebook.drawee.view.SimpleDraweeView
-                android:id="@+id/comic_img"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:actualImageScaleType="centerInside"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/transparent"
+            android:onClick="@{() -> callback.onClick(comic)}"
+            app:cardUseCompatPadding="true">
+        <RelativeLayout
+                android:layout_width="wrap_content"
                 android:background="@android:color/transparent"
-                app:placeholderImage="@android:drawable/ic_menu_recent_history"/>
-    </RelativeLayout>
-</androidx.cardview.widget.CardView>
+                android:layout_height="180dp">
+            <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/comic_img"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:actualImageScaleType="centerInside"
+                    android:background="@android:color/transparent"
+                    app:imageUrl="@{comic.thumbnail.url}"
+                    app:placeholderImage="@android:drawable/ic_menu_recent_history"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

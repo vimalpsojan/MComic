@@ -3,24 +3,28 @@ package com.srl.mob.mcomic.adapters
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.srl.mob.mcomic.R
+import com.srl.mob.mcomic.databinding.ComicListItemBinding
 import com.srl.mob.mcomic.model.Comic
 import kotlinx.android.synthetic.main.comic_list_item.view.*
 
-class ComicListAdapter(data:ArrayList<Comic>?=null) :BaseRecyclerViewAdapter<Comic,ComicListAdapter.ViewHolder>(data)
+class ComicListAdapter(data:ArrayList<Comic>?=null,val callBack:ItemClickCallBack<Comic>?=null) :BaseRecyclerViewAdapter<Comic,ComicListAdapter.ViewHolder>(data)
 {
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder
     {
-        return ViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.comic_list_item, parent, false))
+        val binding:ComicListItemBinding=DataBindingUtil.inflate(LayoutInflater.from(parent.context),R.layout.comic_list_item,parent,false)
+        binding.callback=callBack
+        return ViewHolder(binding)
     }
 
     override fun onBindViewHolder(viewHolder: ViewHolder, index: Int)
     {
-        viewHolder.view.comic_img.setImageURI(data?.get(index)?.thumbnail?.getUrl()?:"")
+        viewHolder.binding.comic=data?.get(index)
+        viewHolder.binding.executePendingBindings()
     }
 
-    class ViewHolder(val view: View): RecyclerView.ViewHolder(view)
+    class ViewHolder(val binding:ComicListItemBinding): RecyclerView.ViewHolder(binding.root)
 
 }
