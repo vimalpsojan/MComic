@@ -7,19 +7,16 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.srl.mob.mcomic.R
 import com.srl.mob.mcomic.adapters.ComicListAdapter
 import com.srl.mob.mcomic.adapters.ItemClickCallBack
 import com.srl.mob.mcomic.databinding.FragmentComicListBinding
-import com.srl.mob.mcomic.di.Injectable
 import com.srl.mob.mcomic.model.Comic
 import com.srl.mob.mcomic.viewModel.ComicListViewModel
-import javax.inject.Inject
 
 
-class ComicListFragment :Fragment(),Injectable,ItemClickCallBack<Comic>
+class ComicListFragment :Fragment(),ItemClickCallBack<Comic>
 {
     override fun onClick(item: Comic) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
@@ -29,8 +26,6 @@ class ComicListFragment :Fragment(),Injectable,ItemClickCallBack<Comic>
     var comicAdapter: ComicListAdapter? = null
 
 
-    @Inject
-    lateinit var viewModelFactory: ViewModelProvider.Factory
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View?
     {
@@ -43,7 +38,7 @@ class ComicListFragment :Fragment(),Injectable,ItemClickCallBack<Comic>
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        val viewModel:ComicListViewModel=ViewModelProviders.of(this,viewModelFactory).get(ComicListViewModel::class.java)
+        val viewModel:ComicListViewModel=ViewModelProviders.of(this,null).get(ComicListViewModel::class.java)
         observeViewModel(viewModel)
     }
 

@@ -6,10 +6,9 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import com.srl.mob.mcomic.api.ComicWorker
 import com.srl.mob.mcomic.model.Comic
-import javax.inject.Inject
 
 
-class ComicListViewModel @Inject constructor(@NonNull application:Application) : AndroidViewModel(application)
+class ComicListViewModel constructor(@NonNull application:Application) : AndroidViewModel(application)
 {
     private val comicListObservable: LiveData<List<Comic>> = ComicWorker.instance.getComicList()
 
