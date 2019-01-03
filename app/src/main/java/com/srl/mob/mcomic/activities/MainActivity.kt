@@ -23,13 +23,6 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector
     override fun supportFragmentInjector(): AndroidInjector<Fragment> {
         return dispatchingAndroidInjector
     }
-//    @Inject
-//    var dispatchingAndroidInjector: DispatchingAndroidInjector<Fragment>? = null
-//
-//    override fun supportFragmentInjector(): AndroidInjector<Fragment>?
-//    {
-//        return dispatchingAndroidInjector
-//    }
 
     /**
      * The [android.support.v4.view.PagerAdapter] that will provide
@@ -90,7 +83,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector
         }
 
         override fun getCount(): Int {
-            // Show 3 total pages.
+            // Show 1 total pages.
             return 1
         }
     }

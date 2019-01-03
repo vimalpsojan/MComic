@@ -10,6 +10,9 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 
+/**
+ * Interface class for retrofit
+ */
 interface ComicAPIInterface
 {
 

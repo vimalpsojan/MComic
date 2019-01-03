@@ -6,7 +6,9 @@ import okhttp3.Response
 import java.math.BigInteger
 import java.security.MessageDigest
 
-
+/**
+ * Class to add auth in rest request
+ */
 class AuthInterceptor : Interceptor
 {
     override fun intercept(chain: Interceptor.Chain?): Response?
@@ -27,6 +29,11 @@ class AuthInterceptor : Interceptor
         return chain?.proceed(request)
     }
 
+    /**
+     * Generate hash
+     *
+     * @param ts time in milliseconds
+     */
     fun gethash(ts:Long):String
     {
         /*

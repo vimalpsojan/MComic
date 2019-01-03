@@ -8,6 +8,10 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+/**
+ * Class to provide data for the app from server.
+ * Data communication between server and app is done here
+ */
 class ComicWorker private constructor()
 {
 

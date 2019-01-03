@@ -1,15 +1,19 @@
 package com.srl.mob.mcomic.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.srl.mob.mcomic.R
 import com.srl.mob.mcomic.databinding.ComicListItemBinding
 import com.srl.mob.mcomic.model.Comic
-import kotlinx.android.synthetic.main.comic_list_item.view.*
 
+/**
+ * Adapter for list comics Child class of BaseRecyclerViewAdapter
+ * @see BaseRecyclerViewAdapter
+ * @property data initial data for adapter
+ * @property callBack ItemClickCallBack interface object
+ */
 class ComicListAdapter(data:ArrayList<Comic>?=null,val callBack:ItemClickCallBack<Comic>?=null) :BaseRecyclerViewAdapter<Comic,ComicListAdapter.ViewHolder>(data)
 {
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder

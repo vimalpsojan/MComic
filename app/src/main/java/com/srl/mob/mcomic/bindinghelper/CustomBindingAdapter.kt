@@ -4,6 +4,9 @@ import android.view.View
 import androidx.databinding.BindingAdapter
 import com.facebook.drawee.view.SimpleDraweeView
 
+/**
+ * Providing Custom Binding adapter for view
+ */
 class CustomBindingAdapter {
     companion object {
         @BindingAdapter("visibleGone")
@@ -12,6 +15,9 @@ class CustomBindingAdapter {
             view.visibility = if (show) View.VISIBLE else View.GONE
         }
 
+        /**
+         * To enable data binding for SimpleDraweeView
+         */
         @BindingAdapter("imageUrl")
         @JvmStatic
         fun setUrl(simpleDraweeView: SimpleDraweeView,url:String)

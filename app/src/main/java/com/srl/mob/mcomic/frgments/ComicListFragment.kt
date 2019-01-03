@@ -19,15 +19,6 @@ import com.srl.mob.mcomic.viewModel.ComicListViewModel
 import javax.inject.Inject
 
 
-/**
- * A simple [Fragment] subclass.
- * Activities that contain this fragment must implement the
- * [ComicListFragment.OnFragmentInteractionListener] interface
- * to handle interaction events.
- * Use the [ComicListFragment.newInstance] factory method to
- * create an instance of this fragment.
- *
- */
 class ComicListFragment :Fragment(),Injectable,ItemClickCallBack<Comic>
 {
     override fun onClick(item: Comic) {
