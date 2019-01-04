@@ -7,3 +7,4 @@ Started folowing MVVM architecture, ViewModel and LiveData Tutorial by Hazem Sal
 
 I have been using MVC architecture for years now with new architecture componets I am switching to MVVM, most of the tutorials were java, so I thought sharing Kotlin might help some who strugles. (It's not perfect or using Kotlin features yet will add as I learn)
 Project is in early stage, will write a detailed note or blog asoon as possible.
+Blog : https://mvvmkotlin.blogspot.com/2019/01/mvvmmodel-view-viewmodel-in-android.html
