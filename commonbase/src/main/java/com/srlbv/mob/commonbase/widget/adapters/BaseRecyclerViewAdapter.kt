@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.adapters
+package com.srlbv.mob.commonbase.widget.adapters
 
 import androidx.recyclerview.widget.RecyclerView
 

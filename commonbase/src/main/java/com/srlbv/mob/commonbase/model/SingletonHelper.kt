@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.model
+package com.srlbv.mob.commonbase.model
 
 open class SingletonHelper<out T, in A>(creator: (A) -> T) {
     private var creator: ((A) -> T)? = creator

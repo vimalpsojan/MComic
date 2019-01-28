@@ -1,6 +1,6 @@
 package com.srl.mob.mcomic.api
 
-import com.srl.mob.mcomic.model.SingletonHelper
+import com.srlbv.mob.commonbase.model.SingletonHelper
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 class APIClient private constructor(){
 
-    companion object : SingletonHelper<Retrofit,String>({
+    companion object : SingletonHelper<Retrofit, String>({
         val interceptor = HttpLoggingInterceptor()
                 interceptor.level = HttpLoggingInterceptor.Level.BODY
         val authInterceptor=AuthInterceptor()

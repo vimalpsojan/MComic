@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.srl.mob.mcomic.R
 import com.srl.mob.mcomic.databinding.ComicListItemBinding
 import com.srl.mob.mcomic.model.Comic
+import com.srlbv.mob.commonbase.widget.adapters.BaseRecyclerViewAdapter
 
 /**
  * Adapter for list comics Child class of BaseRecyclerViewAdapter
@@ -14,7 +15,8 @@ import com.srl.mob.mcomic.model.Comic
  * @property data initial data for adapter
  * @property callBack ItemClickCallBack interface object
  */
-class ComicListAdapter(data:ArrayList<Comic>?=null,val callBack:ItemClickCallBack<Comic>?=null) :BaseRecyclerViewAdapter<Comic,ComicListAdapter.ViewHolder>(data)
+class ComicListAdapter(data:ArrayList<Comic>?=null,val callBack:ItemClickCallBack<Comic>?=null) :
+    BaseRecyclerViewAdapter<Comic, ComicListAdapter.ViewHolder>(data)
 {
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): ViewHolder
     {
