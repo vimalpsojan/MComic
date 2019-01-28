@@ -55,15 +55,4 @@ class ComicListFragment :Fragment(), ItemClickCallBack<Comic>
         })
     }
 
-    companion object
-    {
-
-        @JvmStatic
-        fun newInstance() =
-                ComicListFragment().apply {
-                    arguments = Bundle().apply {
-                        //Add extras if need
-                    }
-                }
-    }
 }
