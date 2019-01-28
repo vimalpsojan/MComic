@@ -7,7 +7,7 @@
         <variable name="comic" type="com.srl.mob.mcomic.model.Comic"/>
         <variable
                 name="callback"
-                  type="com.srl.mob.mcomic.adapters.ItemClickCallBack&lt;com.srl.mob.mcomic.model.Comic&gt;"/>
+                  type="com.srlbv.mob.commonbase.widget.adapters.ItemClickCallBack&lt;com.srl.mob.mcomic.model.Comic&gt;"/>>
     </data>
     <androidx.cardview.widget.CardView
             android:layout_width="wrap_content"
