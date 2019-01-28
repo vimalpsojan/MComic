@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.adapters
+package com.srl.mob.mcomic.ui.adapters
 
 /**
  * Interface for handling item click on lists

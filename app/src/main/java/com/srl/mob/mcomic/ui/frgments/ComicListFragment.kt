@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.frgments
+package com.srl.mob.mcomic.ui.frgments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,8 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.srl.mob.mcomic.R
-import com.srl.mob.mcomic.adapters.ComicListAdapter
-import com.srl.mob.mcomic.adapters.ItemClickCallBack
+import com.srl.mob.mcomic.ui.adapters.ComicListAdapter
+import com.srl.mob.mcomic.ui.adapters.ItemClickCallBack
 import com.srl.mob.mcomic.databinding.FragmentComicListBinding
 import com.srl.mob.mcomic.model.Comic
 import com.srl.mob.mcomic.viewModel.ComicListViewModel

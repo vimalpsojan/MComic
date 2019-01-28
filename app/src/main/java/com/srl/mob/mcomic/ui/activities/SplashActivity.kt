@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.activities
+package com.srl.mob.mcomic.ui.activities
 
 import android.content.Intent
 import android.os.Bundle

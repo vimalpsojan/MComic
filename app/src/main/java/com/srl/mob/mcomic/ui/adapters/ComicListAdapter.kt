@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.adapters
+package com.srl.mob.mcomic.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

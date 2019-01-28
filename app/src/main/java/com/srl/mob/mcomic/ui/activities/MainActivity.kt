@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.activities
+package com.srl.mob.mcomic.ui.activities
 
 import android.os.Bundle
 import android.view.Menu
@@ -6,7 +6,7 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentPagerAdapter
 import com.srl.mob.mcomic.R
-import com.srl.mob.mcomic.frgments.ComicListFragment
+import com.srl.mob.mcomic.ui.frgments.ComicListFragment
 import kotlinx.android.synthetic.main.activity_main.*
 
 

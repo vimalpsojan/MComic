@@ -12,7 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
         <activity
-                android:name=".activities.SplashActivity"
+                android:name="com.srl.mob.mcomic.ui.activities.SplashActivity"
                 android:configChanges="orientation|keyboardHidden|screenSize"
                 android:screenOrientation="portrait"
                 android:theme="@style/FullscreenTheme">
@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-                android:name=".activities.MainActivity"
+                android:name="com.srl.mob.mcomic.ui.activities.MainActivity"
                 android:label="@string/title_activity_main"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
