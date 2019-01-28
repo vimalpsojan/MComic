@@ -4,16 +4,22 @@ import android.app.Application
 import androidx.annotation.NonNull
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import com.srl.mob.mcomic.api.ComicWorker
 import com.srl.mob.mcomic.model.Comic
 
 
 class ComicListViewModel constructor(@NonNull application:Application) : AndroidViewModel(application)
 {
-    private val comicListObservable: LiveData<List<Comic>> = ComicWorker.instance.getComicList()
+    val comicListObservable: LiveData<List<Comic>> = ComicWorker.instance.getComicList()
 
-    fun getComicListObservable(): LiveData<List<Comic>>
+    val selectedComic:MutableLiveData<Comic> = MutableLiveData()
+
+    fun setSelectedComic(comic:Comic)
     {
-        return comicListObservable
+        selectedComic.value=comic
     }
+
+
+
 }
