@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.viewModel
+package com.srl.mob.mcomic.viewmodel
 
 import android.app.Application
 import androidx.annotation.NonNull

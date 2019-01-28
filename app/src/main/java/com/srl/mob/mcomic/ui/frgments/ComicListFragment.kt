@@ -10,13 +10,13 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.srl.mob.mcomic.R
 import com.srl.mob.mcomic.ui.adapters.ComicListAdapter
-import com.srl.mob.mcomic.ui.adapters.ItemClickCallBack
+import com.srlbv.mob.commonbase.widget.adapters.ItemClickCallBack
 import com.srl.mob.mcomic.databinding.FragmentComicListBinding
 import com.srl.mob.mcomic.model.Comic
-import com.srl.mob.mcomic.viewModel.ComicListViewModel
+import com.srl.mob.mcomic.viewmodel.ComicListViewModel
 
 
-class ComicListFragment :Fragment(),ItemClickCallBack<Comic>
+class ComicListFragment :Fragment(), ItemClickCallBack<Comic>
 {
     override fun onClick(item: Comic) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.

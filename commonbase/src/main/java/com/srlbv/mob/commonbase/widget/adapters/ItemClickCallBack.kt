@@ -1,4 +1,4 @@
-package com.srl.mob.mcomic.ui.adapters
+package com.srlbv.mob.commonbase.widget.adapters
 
 /**
  * Interface for handling item click on lists
