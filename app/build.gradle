@@ -9,11 +9,12 @@ apply plugin: 'kotlin-kapt'
 def Public_apikey = '"' + System.getenv("MComic_Public_Key") + '"' ?: '"Define public api key"'
 def Private_apikey = '"' + System.getenv("MComic_Private_Key") + '"' ?: '"Define private api key"'
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.srl.mob.mcomic"
         minSdkVersion 19
-        targetSdkVersion 28
+        targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
