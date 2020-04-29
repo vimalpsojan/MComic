@@ -26,4 +26,5 @@ licenses:
   - 'android-sdk-preview-license-.+'
 
 script:
+  - chmod +x
   ./gradlew assemble
