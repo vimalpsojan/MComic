@@ -1,1 +1,3 @@
-include ':app', ':commonbase'
+include ':core'
+include ':app'
+rootProject.name = "MComic"
